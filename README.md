@@ -6,6 +6,9 @@ This is a KiCad project for a mechanical keyboard PCB for the Commodore 128 home
 
 This has not yet been fully tested however the initial prototype works fine electrically.
 
+**Note: Pinout is not the same as on the original keyboard**
+The pinout has been changed to match the one on the Commodore 128CR PCB, which will also be present on the yet to be released C128 Neo revision 4 board.
+
 ## Todo:
 - Validate the locking key functionality
 - Mechanical fit is not yet tested
