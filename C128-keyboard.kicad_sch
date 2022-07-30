@@ -4517,7 +4517,7 @@
     (uuid 8f2228b6-afd3-4817-adf7-5d66443588ee)
     (property "Reference" "SW52" (id 0) (at 324.485 85.09 0))
     (property "Value" "Space" (id 1) (at 324.485 87.63 0))
-    (property "Footprint" "MX_Alps_Hybrid:MX-9U-ReversedStabilizers-NoLED" (id 2) (at 324.485 93.345 0)
+    (property "Footprint" "lib_fp:MX-7_9U-ReversedStabilizers-NoLED" (id 2) (at 324.485 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 324.485 93.345 0)
@@ -5949,7 +5949,7 @@
       (reference "SW51") (unit 1) (value "R-Shift") (footprint "MX_Alps_Hybrid:MX-1U-NoLED")
     )
     (path "/8f2228b6-afd3-4817-adf7-5d66443588ee"
-      (reference "SW52") (unit 1) (value "Space") (footprint "MX_Alps_Hybrid:MX-9U-ReversedStabilizers-NoLED")
+      (reference "SW52") (unit 1) (value "Space") (footprint "lib_fp:MX-7_9U-ReversedStabilizers-NoLED")
     )
     (path "/788d6c18-cfab-4cf0-9b9c-9b5e11f782b2"
       (reference "SW53") (unit 1) (value "Num2") (footprint "MX_Alps_Hybrid:MX-1U-NoLED")
