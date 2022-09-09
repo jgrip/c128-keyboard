@@ -1,0 +1,30 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: "render_top"
+    comment: "3D render"
+    type: render_3d
+    dir: img
+    options:
+      download: true
+      output: '%f-3d-top.%x'
+      ray_tracing: false
+      view: top
+      rotate_x: 1
+      zoom: 9
+
+  - name: "pcb_top_img"
+    comment: "Top image of PCB"
+    type: pcbdraw
+    dir: img
+    options:
+      format: 'png'
+
+  - name: "pcb_bot_img"
+    comment: "Bottom image of PCB"
+    type: pcbdraw
+    dir: img
+    options:
+      bottom: true
+      format: 'png'

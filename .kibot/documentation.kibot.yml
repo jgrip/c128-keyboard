@@ -1,0 +1,48 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: "print_sch"
+    comment: "PDF - print schematic"
+    type: pdf_sch_print
+    dir: docs
+
+  - name: "bom"
+    comment: "Standard BOM in CSV format"
+    type: bom
+    dir: docs
+
+  - name: "ibom"
+    comment: "HTML BOM"
+    type: ibom
+    dir: docs
+    options:
+      output: '%f-ibom-rev_%r.html'
+      layer_view: 'F'
+      sort_order: 'C,R,RP,L,D,U,Q,Y,X,F,SW,A,~,HS,CNN,J,P,NT,MH'
+      blacklist: 'G*,H*,M1,RFCAGE1'
+  
+  - name: "pcb_top_pdf"
+    comment: "PCB top view"
+    type: pdf_pcb_print
+    dir: docs
+    options:
+      output: '%f-board_top.%x'
+      scaling: 2
+    layers:
+      - 'F.SilkS'
+      - 'F.Mask'
+      - 'Edge.Cuts'
+
+  - name: "pcb_bot_pdf"
+    comment: "PCB bottom view"
+    type: pdf_pcb_print
+    dir: docs
+    options:
+      mirror: true
+      output: '%f-board_bot.%x'
+      scaling: 1
+    layers:
+      - 'B.SilkS'
+      - 'B.Mask'
+      - 'Edge.Cuts'

@@ -1,0 +1,56 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: jlc_gerber
+    comment: "Gerber files suitable for JLCPCB"
+    type: gerber
+    dir: gerbers/jlc
+    options: &gerber_options
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: true
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+      use_protel_extensions: true
+      create_gerber_job_file: false
+      disable_aperture_macros: true
+      gerber_precision: 4.6
+      use_gerber_x2_attributes: false
+      use_gerber_net_attributes: false
+      line_width: 0.1
+      subtract_mask_from_silk: true
+      inner_extension_pattern: .gp%n
+    layers:
+      - copper
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - Edge.Cuts
+
+  - name: jlc_drill
+    comment: "Drill files suitable for JLCPCB"
+    type: excellon
+    dir: gerbers/jlc
+    options:
+      pth_and_npth_single_file: false
+      pth_id: "PTH"
+      npth_id: "NPTH"
+      metric_units: true
+      map: gerber
+      route_mode_for_oval_holes: false
+
+  - name: jlc_zip
+    comment: "Zip file suitable for JLCPCB"
+    type: compress
+    dir: gerbers
+    options:
+      output: '%f-rev_%r.%x'
+      files:
+        - from_output: jlc_gerber
+          dest: /
+        - from_output: jlc_drill
+          dest: /
