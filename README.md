@@ -4,7 +4,7 @@ This is a KiCad project for a mechanical keyboard PCB for the Commodore 128 home
 
 ![Render of PCB](https://raw.githubusercontent.com/jgrip/c128-keyboard/main/Pictures/prototype.jpg)
 
-This has not yet been fully tested however the initial prototype works fine electrically.
+# This is not a finished product ready for use, it is still under development.
 
 **Note: Pinout is not the same as on the original keyboard**
 The pinout has been changed to match the one on the Commodore 128CR PCB, which will also be present on the yet to be released C128 Neo revision 4 board.
