@@ -1,9 +1,9 @@
 (kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
-  (symbol "MAX16504" (in_bom yes) (on_board yes)
+  (symbol "MAX16054" (in_bom yes) (on_board yes)
     (property "Reference" "U" (id 0) (at -6.35 11.43 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "MAX16504" (id 1) (at 7.62 11.43 0)
+    (property "Value" "MAX16054" (id 1) (at 7.62 11.43 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6" (id 2) (at 0 0 0)
@@ -15,13 +15,13 @@
     (property "ki_description" "On/Off controller with debounce" (id 4) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (symbol "MAX16504_0_1"
+    (symbol "MAX16054_0_1"
       (rectangle (start -6.35 10.16) (end 6.35 -11.43)
         (stroke (width 0) (type default) (color 0 0 0 0))
         (fill (type background))
       )
     )
-    (symbol "MAX16504_1_1"
+    (symbol "MAX16054_1_1"
       (pin input line (at -8.89 3.81 0) (length 2.54)
         (name "IN" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
